@@ -20,7 +20,7 @@ print(result)
 
 print("Here is a floor version (crop decimal):", 20 // 3) #6
 
-result = 5**5 #raising a number to a power (5^5)
+result = 5**2 #raising a number to a power (5^)
 print(result)
 
 #You can use round instead. 
@@ -37,6 +37,13 @@ print((20 / 3) + 1)
 #You can, however, force certain operations to happen first with ()
 print(20 / (3 + 1))
 
+######### MODULUS AND POWER ############
+
+#5 * 5 * 5 * 5* 5
+print(5**5)
+
+#The remainder of 78 / 11 is 1.
+print(78 % 11)
 
 
 
