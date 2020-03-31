@@ -138,3 +138,75 @@ else:
 #Setting a starting value (such as -1), possibly changing it, 
 #and checking it afterwards creates a flag variable.
 #Just a concept. Nothing new on syntax
+
+######### "DO WHILE" loop ##########
+
+#In other languages, there is a concept as a do-while loop. 
+#These loops always execute at least once.
+#We can mimmick this in python easily.
+
+i = 15
+print(i) #prints i atleast once no matter what
+i += 1
+while (i < 10):
+    print(i)
+    i += 1
+
+
+#To generalize this:
+
+#do stuff
+#condition - true to continue
+    #do stuff 
+
+#This structure is useful for sentinel / indefinate loops
+
+
+########## Indefinate / Sentinel loops ##########
+
+#an Indefinate loop is a loop that we do not decide how long it will run ahead of time
+#The loop can be stopped, however. This makes it different than an infinate loop.
+#An example may be displaying a menu numerous times
+
+
+print("Do you want to continue? Y/N: ") 
+response = input()
+while response == "Y" or response == "y":
+    print("Do you want to continue? Y/N: ") 
+    response = input()  
+#a logical name for the variable would be 'continue' or 'in'  
+#however these are keyword. don't try it.
+
+#not super common vocab but good to know...
+#A sentinel value is a value used to stop a loop. In this case it is anything besides "Y" or "y"
+#for programs a sentinel value is often 'q' 
+
+
+########## UPPER AND LOWER ##########
+
+
+#We can also write our code like so
+print("Do you want to continue AGAIN? Y/N: ") 
+response = input()
+while response.lower() == "y":
+    print("Do you want to continue? Y/N: ") 
+    response = input()  
+
+#This is important to understand as "Y" and "y" are not the same thing
+#Overlooking this can introduce logical bugs in our software
+
+#There is also an upper.
+#We can also invoke it on constant strings
+print("am i screaming?".upper())
+
+########## checking if a string is uppercase or lowercase ##########
+
+name = "Caleb"
+if name.isupper():
+    print("Upper")
+elif name.islower():
+    print("Lower")
+else:
+    print("Mixed")
+
+#not sure when you might need this but still good to know.
