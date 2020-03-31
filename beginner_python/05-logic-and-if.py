@@ -84,7 +84,28 @@ else:
     print("You may have some years left in you")
 
 
+########## CONDITIONS WITH BOOLEANS ##########
+
+
+#When working with a boolean variable, you may think to do this
+caleb_is_cool = False
+if caleb_is_cool == True:
+    print("Let's be friends")
+else:
+    print("Eww")
+
+
+#since the == operator returns True or False, and the variable is already false...
+#We can do this instead:
+caleb_is_cool = False
+if caleb_is_cool:
+    print("Let's be friends")
+else:
+    print("Eww")
+
+
 ########## LOGICAL OPERTATORS #########
+
 
 #Logical operators can be used to make complex expressions that ultimately evaluate to true or false.
 #and --> both must be true

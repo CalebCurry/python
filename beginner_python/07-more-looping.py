@@ -94,6 +94,31 @@ while(i >= 0):
     i -= 2 
 print()
 
+
+########## CONVERTING WHILE TO FOR AND BACK ###########
+
+
+#I think it is important to comfortably work with for and while
+#Both loops need an initialization, condition, and update.
+
+initialization = 5
+stop_at = 10
+incremenet = 1
+
+for i in range(initialization, stop_at, increment):
+    print("for loop:", i)
+
+
+while(initialization < stop_at):
+    print("while loop:", initialization)
+    initialization += increment
+
+
+#To make them match, the update should come at the end of the while
+#When passing a variable to range, the variable is not affected
+#Range returns new data and initialization is left at 5. 
+
+
 ########## ELSE WITH WHILE ##########
 #The else statement for a while will execute if no break is hit. 
 

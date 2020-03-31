@@ -47,6 +47,7 @@ for i in range(10):
     print("loading...", end= " ")
 print()
 
+#i is known as in iteration variable
 #i will obtain a value each iteration based on the range we select. 
 #for range(10), we get 0-9:
 
