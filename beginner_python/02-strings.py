@@ -62,9 +62,9 @@ print("my " "name "
 print("""Name: Caleb
 Age: 58""")
 
-#skip newline using / (without it, it would go down a line)
+#skip newline using \ (without it, it would go down a line each line)
 print("""\
-Name: Caleb
+Name: Caleb. \
 Age: 58""")
 
 """You may see
@@ -189,7 +189,7 @@ print(msg) #NOT WHAT WE WANTED!
 
 #GOOD
 length = len(name)
-msg = "length is " + str(length))
+msg = "length is " + str(length)
 print(msg)
 
 #EVEN BETTER
