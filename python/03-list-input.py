@@ -106,4 +106,3 @@ while True:
     print("all foods:", fav_foods)
 
 print("final foods:", fav_foods)
-
