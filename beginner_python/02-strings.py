@@ -179,6 +179,7 @@ print("Length is " + str(length))
 #this works however sometimes you just need one combined string instead of components.
 #when we use a comma, we are passing in data as separate arguments. 
 #fortunately, print knows how to handle it. Other times, we must pass in one string.
+#WARNING --> Commas automatically print a space.
 print("length is ", length)
 
 #an example of this is if we need a variable. We cannot use a comma:
@@ -193,7 +194,7 @@ msg = "length is " + str(length)
 print(msg)
 
 #EVEN BETTER
-#We can also nest method calls:
+#We can also nest function calls:
 print("length is " + str(len(name)))
 #The order in which these are invoked are in to out...
 #len(name) is first which returns a number.

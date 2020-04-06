@@ -69,7 +69,7 @@ print(names) #Caleb YAAYYYYY
 
 #another Option is to use a method on the list...copy()
 names1 = ["Caleb", "Emily", "Sabrina"]
-names2 = names.copy()
+names2 = names1.copy()
 names2[0] = "Kaylubbbbb"
 print(names) #Caleb YAAYYYYY
 
