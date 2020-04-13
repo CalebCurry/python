@@ -18,9 +18,9 @@ for language in languages:
         print("YOU CAN'T SEE ME!")
     print("It's JOHN CENA!!!!") #executes first iteration but not 2nd
 
-########## RETURN #########
+########## CONTINUE #########
 
-#Return works in a similar way except that it will only skip the rest of the iteration.
+#continue works in a similar way except that it will only skip the rest of the iteration.
 #This may be useful if you need to continue iterating through the list
 #(in this context you could be looking for duplicates or other interesting lanugages)
 
@@ -103,7 +103,7 @@ print()
 
 initialization = 5
 stop_at = 10
-incremenet = 1
+increment = 1
 
 for i in range(initialization, stop_at, increment):
     print("for loop:", i)
