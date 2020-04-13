@@ -39,7 +39,7 @@ age = 20
 fun = False
 likes_to_dance = True
 
-if (age < 30 or fun == True) and likes_to_dance:
+if (age < 30 or fun) and likes_to_dance:
     print("You're invited to the party!")
 else:
     print("get lost freakbag") #most general
@@ -47,7 +47,7 @@ else:
 #This could alternatively be represented with nested if statements 
 #and can allow more specific responses
 
-if(age < 30 or fun == true):
+if age < 30 or fun:
     if likes_to_dance:
         print("You're invited to the party!")
     else:
