@@ -264,7 +264,7 @@ def greet(name, be_nice=True):
 #We can utilize it.
 def greet_all(people):
     for person in people:
-        print(greet(person)) //because it returns string
+        print(greet(person)) #because it returns string
 
 people_to_greet = ["Johnny", "Jimmy", "Jacob"]
 greet_all(people_to_greet)
