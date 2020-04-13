@@ -7,7 +7,7 @@ for language in languages:
         break
 
 #proper nesting is vital inside of python. Unlike many other languages,
-#python is whitespace sensitive. The position of the code is important
+#python is indentation sensitive. The position of the code is important
 
 for language in languages:
     if language == "C#":
