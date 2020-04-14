@@ -41,6 +41,32 @@ if("pizza" in healthy):
 
 print(backpack)
 
+########## LIST COMPREHENSION ##########
+
+
+healthy = ["kale chips", "broccoli"]
+backpack = ["pizza", "frozen custard", "apple crisp", "kale chips"] 
+
+backpack[:] = [item for item in backpack if item in healthy]
+#slice --> [:] keeps same object id
+print(backpack)
+
+#similar to this (except thi one creates new var):
+healthy_backpack = []
+
+for item in backpack:
+    if item in healthy:
+        healthy_backpack.append(item.upper())
+
+print(healthy_backpack)
+
+
+########## LIST COMPREHENSION ESSENTIALS ##########
+
+
+squares = [i**2 for i in range(10) if i % 2 == 0]
+print(squares)
+
 
 ########## COUNTING ELEMENTS IN LIST ##########
 
