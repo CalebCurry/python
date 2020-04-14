@@ -91,7 +91,6 @@ backpack = ["pizza slice", "pizza slice", "pizza slice"]
 print(backpack.count("pizza slice")) #3
 
 #This can be used to prevent too many items:
-
 if(backpack.count("pizza slice") < 3):
     backpack.append("pizza slice")
     print("You put a piece of pizza in your backpack")
