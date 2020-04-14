@@ -1,14 +1,3 @@
-########## REVERSE LIST ##########
-
-
-backpack = ["pizza slice", "button", "pizza slice", "fishing pole", 
-"pizza slice", "nunchicks", "pizza slice", "sandwich from mcdonalds"]
-
-print(backpack)
-backpack.reverse()
-print(backpack)
-
-
 ########## SORT METHOD ##########
 
 
