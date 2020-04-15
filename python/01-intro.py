@@ -27,7 +27,7 @@ backpack = ["pizza", "chicken pot pie", "kale chips"]
 if("pizza" in healthy):
     print("eating it")
 
-#We can make this more dynamic. Let's remove chicen pot pie from list. 
+#We can make this more dynamic. Let's remove pizza from list. 
 
 
 ########## REMOVING FROM LIST ##########
