@@ -6,14 +6,14 @@
 work_days = ["Monday", "Tuesday", "Thursday", "Friday", "Saturday"]
 
 #OVERTIME!
-work_days.insert(3, "Wednesday") #index, "data"
+work_days.insert(2, "Wednesday") #index, "data"
 
 print(work_days)
 
 #What if we want to do the opposite and take a day out?
 
 
-########## REMOVE ELEMENT FROM LIST BY INDEX ##########
+########## REMOVE ELEMENT FROM LIST BY VALUE OR INDEX ##########
 
 
 #We learned how to remove by value:
@@ -57,7 +57,7 @@ print(work_days)
 ########## REMOVING ALL OCCURANCES IN LIST ##########
 
 backpack = ["pizza slice", "button", "pizza slice", "fishing pole", 
-"pizza slice", "nunchicks", "pizza slice", "sandwich from mcdonalds"]
+"pizza slice", "nunchucks", "pizza slice", "sandwich from mcdonalds"]
 
 backpack.remove("pizza slice")
 print(backpack) #SO MUCH PIZZA!
@@ -68,7 +68,7 @@ while(backpack.count("pizza slice") > 0):
 print(backpack)
 
 #This may not be the most optimized solution as each removal requires
-#an iteration from backpack.count. But it's cleanest
+#an iteration from backpack.count. 
 #You should also avoid modifying a list while iterating, so a for-in loop is bad
 
 #for item in backpack:
@@ -76,8 +76,20 @@ print(backpack)
 #        backpack.remove(item)
 
 #The original solution is fine for removing data from reasonably sized lists
-#for very very large lists, look into list comprehension 
-#Which we are not getting into quite yet. 
+
+#Here is a better solution:
+backpack = ["pizza slice", "button", "pizza slice", "fishing pole", 
+"pizza slice", "nunchucks", "pizza slice", "pizza slice", "sandwich from mcdonalds"]
+
+for item in backpack[:]: #uses copy to keep index
+    if item == "pizza slice":
+        backpack.remove(item)
+
+#Here is a list comprehension version:
+backpack = ["pizza slice", "button", "pizza slice", "fishing pole", 
+"pizza slice", "nunchucks", "pizza slice", "pizza slice", "sandwich from mcdonalds"]
+
+backpack[:] = [item for item in backpack if item != "pizza slice"]
 
 
 ########## REVERSE LIST ##########
