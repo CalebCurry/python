@@ -124,3 +124,5 @@ print(counts)
 
 
 ########## COUNTING ELEMENTS WITH COUNTER ##########
+
+print(Counter(backpack))
