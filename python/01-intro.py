@@ -96,3 +96,31 @@ if(backpack.count("pizza slice") < 3):
     print("You put a piece of pizza in your backpack")
 else:
     print("How about you go to the gym?")
+
+
+########## INTRO TO SETS ##########
+
+
+#Don't care about order
+#Just need to know yes or no? 
+#Sets...
+
+backpack2 = {"sword", "rubber duck", "sice a pizza", "parachute", "sword"}
+print("sword" in backpack2)
+
+
+########## COUNTING WITH LIST COMPREHENSION ##########
+
+
+backpack = ["sword", "rubber duck", "slice of pizza", "parachute",
+"sword", "rubber duck", "slice of pizza", "parachute", 
+"sword", "rubber duck", "slice of pizza", "parachute", 
+"sword", "rubber duck", "slice of pizza", "parachute",
+"cannon", "laser cannon", "Canon 90D", "can of soup"]
+
+counts = [[backpack.count(item), item] for item in set(backpack)]
+
+print(counts)
+
+
+########## COUNTING ELEMENTS WITH COUNTER ##########
