@@ -127,3 +127,10 @@ print(data)
 print(data_reversed)
 
 
+########## REVERSE USING SLICING ##########
+
+data = ["a", "b", "c", "d", "e", "f", "g", "h"]
+data[:] = data[::-1]
+print(data)
+
+
