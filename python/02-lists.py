@@ -1,6 +1,5 @@
 ########## INSERT INTO MIDDLE OF LIST ##########
 
-
 #Lists are ordered, and this order may matter to you. 
 
 work_days = ["Monday", "Tuesday", "Thursday", "Friday", "Saturday"]
@@ -62,7 +61,7 @@ backpack = ["pizza slice", "button", "pizza slice", "fishing pole",
 backpack.remove("pizza slice")
 print(backpack) #SO MUCH PIZZA!
 
-while(backpack.count("pizza slice") > 0):
+while("pizza slice" in backpack):
     backpack.remove("pizza slice")
 
 print(backpack)
@@ -85,12 +84,15 @@ for item in backpack[:]: #uses copy to keep index
     if item == "pizza slice":
         backpack.remove(item)
 
+print(backpack)
+
 #Here is a list comprehension version:
 backpack = ["pizza slice", "button", "pizza slice", "fishing pole", 
 "pizza slice", "nunchucks", "pizza slice", "pizza slice", "sandwich from mcdonalds"]
 
 backpack[:] = [item for item in backpack if item != "pizza slice"]
 
+print(backpack)
 
 ########## REVERSE LIST ##########
 
@@ -132,5 +134,3 @@ print(data_reversed)
 data = ["a", "b", "c", "d", "e", "f", "g", "h"]
 data[:] = data[::-1]
 print(data)
-
-
