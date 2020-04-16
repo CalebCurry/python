@@ -103,3 +103,12 @@ backpack.reverse()
 print(backpack)
 
 
+########## SWAP AND REVERSE ALGORITHMS ##########
+
+data = ["a", "b", "c", "d", "e", "f", "g", "h"]
+
+for index in range(len(data) // 2):
+    data[index], data[-index-1] = data[-index-1], data[index]
+
+print(data)
+
