@@ -112,3 +112,18 @@ for index in range(len(data) // 2):
 
 print(data)
 
+
+########## REVERSED ITERATOR ##########
+
+
+data = ["a", "b", "c", "d", "e", "f", "g", "h"]
+
+data_reversed = []
+
+for item in reversed(data):
+    data_reversed.append(item)
+
+print(data)
+print(data_reversed)
+
+
