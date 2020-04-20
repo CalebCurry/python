@@ -172,6 +172,7 @@ import ultimate_utils.math_utils
 
 ultimate_utils.list_utils.print_2d([[1,2, 3], [4, 5, 6], [7, 8, 9]])
 
+#list_utils.print_2d([[9, 9, 9],[9, 9, 9]]) error
 #It would be ideal if we could work with list_utils directly.
 from ultimate_utils import * #doesn't work by default. 
 #This is where __all__ comes in inside __init__.py
