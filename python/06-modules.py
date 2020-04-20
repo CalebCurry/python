@@ -63,44 +63,122 @@ print(test.randint(5,10))
 
 ########## From module import Something ##########
 
+
 #in the previous section we showed how to import something.
 import random
 
 print(type(random))
 #Doing this requires us to access the module using the dot operator
 
+#As an alternative, we can import one specific thing from the module
 
+from random import randint, seed
+print("from random import randit:", randint(5,5)) #always 5 lol
+
+#This replaces anything locally called randint:
+randint = "SUPER IMPORTANT DATA DON'T DELETE!!!!"
+from random import randint
+
+print("RIP data:", randint)
 
 
 ########## Alias an import ##########
+
+
+import random as r
+
+print("r.randint:", r.randint(6,6))
+
+#This can be used to preserve data locally:
+
+randint = "SUPER IMPORTANT DATA DON'T DELETE!!!!"
+from random import randint as ri
+
+print("ri:", ri(7,7))
+print("NOT LOST!", randint)
+
 ########## import * ##########
+
+#We now we can bring one specific item from a module using 
+from random import randint
+#This puts it directly in our symbol table replacing anything called randint
+#You will see sometimes importing everything, even though it's not recommended
+#100% guarentee 30% of the time to yeet out something important:
+
+seed = "watermelon"
+from random import *
+
+print("Today we are going to plant", seed, "seeds! Yay!") #Not what we wanted. 
+
+#We can get a better picture of this by printing the output of dir()
+#which shows the identifiers in scope
+
+a, b, c, e, f, g = 0, 0, 0, 0, 0, 0 #find these:
+print(dir())
+
 ########## Creating a Module ##########
+
+
+#We can easily create our own module by just creating a python file
+#Any variables or functions will be imported
+#See utils.py
+import utils
+print("Range (high-low):", utils.range([5, 3, 5, 1, 10]))
+
+
 ########## sys path ##########
-########## Packages ##########
 
-import sys
 
-import math
-print(math.pi)
+#When we created the utils module, it came from the same directory.
+#This is part of the default search path
+#You can see the places modules are searched for by importing a special module
+#https://docs.python.org/3/tutorial/modules.html#standard-modules
 
-#print (pi) NOPE
-from math import pi
-print(pi)
+import sys 
+
+#always available, work directly with interpreter
+#unlike some other modules. 
+#import winreg doesn't work for me (im on mac...maybe on windows)
+#docs give this example:
+sys.ps1 = 'C> ' #(Try it in interactive mode if needed)
 
 print(sys.path)
 
-sys.path.append('/Users/calebcurry/Python')
+#path prints locations searched for modules. 
 
-import utils
+#We could move utils up a directory (or anywhere we want)
+#and import it like so:
+sys.path.append("/Users/calebcurry/Python")
 
-print("Range:", utils.range([5, 3, 5, 1, 10]))
-
-a, b, c, e, f, g = 0, 0, 0, 0, 0, 0
-
-pi = 3.2
-from math import pi
-print(globals())
-print(dir())
+#There are ways you can do this more dynamically
+#https://stackoverflow.com/questions/30218802/get-parent-of-current-directory-from-python-script/39618108
+from os.path import dirname, abspath
+d = dirname(dirname(abspath(__file__)))
+sys.path.append(d)
 
 
-import json
+########## Packages ##########
+
+
+#If you look in the directory of modules and take a gander
+#You'll notice some are directories while others are .py files
+#The ones that are directories are known as packages.
+#importing and using is same, creation is slightly different as mult. files combined
+
+#for example, tkinter, a GUI tool, is a folder. 
+#open it up and see a bunch of components and __init__.py to wrap it up. 
+import ultimate_utils.list_utils
+import ultimate_utils.math_utils
+
+ultimate_utils.list_utils.print_2d([[1,2, 3], [4, 5, 6], [7, 8, 9]])
+
+#It would be ideal if we could work with list_utils directly.
+from ultimate_utils import * #doesn't work by default. 
+#This is where __all__ comes in inside __init__.py
+list_utils.print_2d([[9, 9, 9],[9, 9, 9]])
+
+#Brief bit on compilation
+#going through this process you may have noticed a __psycache__ folder
+#https://docs.python.org/3/tutorial/modules.html#compiled-python-files
+#"To speed up loading modules, Python caches the compiled version of each module"
+#enough on this tho, my brain hurts.
