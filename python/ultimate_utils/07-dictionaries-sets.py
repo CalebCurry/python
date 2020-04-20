@@ -51,6 +51,7 @@ print(emails.get("Ryan", "Not found")) #optional return arg if not found
 
 ######### ADD DATA TO DICTIONARY #########
 
+
 #How to add data (3 ways here):
 #indexing
 emails["josh"] = "josh@j.com"
@@ -67,13 +68,51 @@ print(emails)
 #Key must be hashable
 emails[5] = "test"
 emails[(1, 2)] = "yep"
-#emails[[5, 3]] = "nope" 
-
+#emails[[5, 3]] = "nope" #list is not hashable (mainly cuz mutable)
 
 
 ######### LOOPING THROUGH KEYS #########
+
+#dictionary is an iterable (implements __iter__)
+
+emails = {
+    "Caleb":"caleb@email.com", 
+    "Gal":"g@example.com",
+    "Ted": "talk@gmail.com"
+}
+
+#k is a variable but k by convention for key
+for k in emails:
+    print(k)
+
+#You can use the key to get the element 
+#(but will show better way in next section)
+for k in emails:
+    print("index", k, "is", emails[k])
+
+
 ######### LOOPING THROUGH KEY-VALUE PAIRS #########
+
+
+#In the prev section we used the index with [].
+#Although it works, you can do this:
+
+for k, elem in emails:
+    print(k, elem)
+
+#Each iteration k will be the key and elem will be the item found at this key.
+
+
 ######### SETS EXPLAINED #########
+
+
+#Sets are similar to dictionaries in that the data is hashed and it is unordered.
+#Sets are similar to lists in that they just contain the data and not a key-value pair
+#Sets are different than lists in that you cannot have duplicates
+
+
+#we used set with list com STOPPED HERE
+
 ######### REMOVE DUPLICATES FROM LIST / CREATE SET FROM LIST ##########
 ######### UNION AND INTERSECTION #########
 ######### DIFFERENCE AND SYMMETRIC DIFFERENCE ######### 
