@@ -64,7 +64,7 @@ print(emails)
 emails.update(josh = "new@email.com")
 print(emails)
 
-#Key must be immutable...
+#Key must be hashable
 emails[5] = "test"
 emails[(1, 2)] = "yep"
 #emails[[5, 3]] = "nope" 
