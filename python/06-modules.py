@@ -1,6 +1,5 @@
 ########## Intro to modules ########## 
 
-
 #A module is just a fancy name for a python file
 #By convention, they are often imported at the top of a file
 #but you can do it anywhere
@@ -18,8 +17,9 @@ print(pickle)
 #Or, check out this: https://docs.python.org/3/py-modindex.html
 
 #We use the module with dot notation to access the functions or variables
-#Similar to an object, but not quite exactly the same thing
+#an object of type module
 print(math.pi)
+print(type(math))
 
 #Here is another example
 #Pseudorandom number 0-100 (inclusive)
@@ -104,5 +104,3 @@ print(dir())
 
 
 import json
-
-json.
