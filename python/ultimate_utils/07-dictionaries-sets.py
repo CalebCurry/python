@@ -258,3 +258,5 @@ print(symmetric)
 #This is like:
 symmetric = only_my_colors | only_her_colors
 print(symmetric)
+
+#like union and intersection, there are method versions that return. --> .difference and .symmetric_difference
