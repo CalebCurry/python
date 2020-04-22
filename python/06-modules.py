@@ -123,7 +123,7 @@ print(dir())
 #Any variables or functions will be imported
 #See utils.py
 import utils
-print("Range (high-low):", utils.range([5, 3, 5, 1, 10]))
+print("Range (high-low):", utils.stats_range([5, 3, 5, 1, 10]))
 
 
 ########## sys path ##########
