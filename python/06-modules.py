@@ -155,31 +155,3 @@ sys.path.append("/Users/calebcurry/Python")
 from os.path import dirname, abspath
 d = dirname(dirname(abspath(__file__)))
 sys.path.append(d)
-
-
-########## Packages ##########
-
-
-#If you look in the directory of modules and take a gander
-#You'll notice some are directories while others are .py files
-#The ones that are directories are known as packages.
-#importing and using is same, creation is slightly different as mult. files combined
-
-#for example, tkinter, a GUI tool, is a folder. 
-#open it up and see a bunch of components and __init__.py to wrap it up. 
-import ultimate_utils.list_utils
-import ultimate_utils.math_utils
-
-ultimate_utils.list_utils.print_2d([[1,2, 3], [4, 5, 6], [7, 8, 9]])
-
-#list_utils.print_2d([[9, 9, 9],[9, 9, 9]]) error
-#It would be ideal if we could work with list_utils directly.
-from ultimate_utils import * #doesn't work by default. 
-#This is where __all__ comes in inside __init__.py
-list_utils.print_2d([[9, 9, 9],[9, 9, 9]])
-
-#Brief bit on compilation
-#going through this process you may have noticed a __psycache__ folder
-#https://docs.python.org/3/tutorial/modules.html#compiled-python-files
-#"To speed up loading modules, Python caches the compiled version of each module"
-#enough on this tho, my brain hurts.
