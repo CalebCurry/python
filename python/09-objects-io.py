@@ -115,8 +115,10 @@ except Exception as e:
 try:
     file = open("input.txt", "r") #Make sure it exists
     data = int(file.read()) #This should fail
-except FileNotFoundError as e:
+except FileNotFoundError as e: #subclass of OSError
     print("This file is not found")
+except OSError as e:
+    print("Couldn't open file")
 except PermissionError as e:
     print("file is locked")
 except ValueError as e:
@@ -144,12 +146,22 @@ print(file.closed) #closed
 
 #opening can still throw an exception...Maybe do it like so:
 try:
-    with open("no", "r") as file: #Make sure it exists
-        try:
-            int(file.read())
-        except:
-            print("parse error...etc...")
-            #do whatever
-
+    with open("no", "r") as file: 
+        int(file.read())
 except Exception as e:
     print(e)
+
+#I think this could be written like so but may require another try inside else:   
+try:
+    file = open('nope')
+except OSError as e:
+    print(e)
+else:
+    with file:
+        #try:
+            file.read()
+        #except Exception as e:
+        #    print(e)
+
+#https://stackoverflow.com/questions/40640956/python-with-open-except-filenotfounderror/40641103
+#https://stackoverflow.com/questions/28633555/how-to-handle-filenotfounderror-when-try-except-ioerror-does-not-catch-it
