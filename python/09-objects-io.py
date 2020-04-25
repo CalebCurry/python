@@ -21,7 +21,7 @@ class Book():
     #It's approriate to give something for __hash__ when you override __eq__
     # #This is the recommended way if mutable (like it is here):
     __hash__ = None
-    
+
 
 ########## Passing by Object Reference ##########
 
@@ -63,5 +63,93 @@ print(book) #Stayed the same!
 
 
 ########## Reading from a file ##########
-########## Context manager (as?) ##########
+
+file = open("input.txt", "a") #append. Creates if not there
+file = open("input.txt", "w") #overwrites
+#file = open("input.txt", "r+") #Read and write. Throws exception if not there
+#not as easy to work with on r/w in my oppinion
+
+#\t to sep title from page count
+file.write("Are You My Mother?\t72\n")
+file.write("The Digging-est Dog\t72")
+file.close() #close when done
+
+file = open("input.txt", "r")
+
+#for line in file:
+#    print(line, end="") #end="" as \n is kept in line
+#print()
+
+#Numerous ways to read into list. Here is one. 
+data = file.read().split('\n')
+print(data)
+#https://stackoverflow.com/questions/3277503/how-to-read-a-file-line-by-line-into-a-list
+
+file.close()
+
+#Each line is title\tpages so we split it. 
+book1_data = data[0].split('\t')
+book = Book(book1_data[0], book1_data[1])
+
+book2_data = data[1].split('\t')
+book2 = Book(book2_data[0], book2_data[1])
+
+print(book)
+print(book2)
+
+
 ########## Intro to Exception handling ##########
+
+
+#When working with files (or doing anything in programming),
+#Exceptions can be thrown
+
+#file = open("doesntexist.csv", "r") #get wrecked son
+
+try:
+    file = open("doesntexist.csv", "r")
+except Exception as e:
+    print(type(e))
+    print(e)
+
+try:
+    file = open("input.txt", "r") #Make sure it exists
+    data = int(file.read()) #This should fail
+except FileNotFoundError as e:
+    print("This file is not found")
+except PermissionError as e:
+    print("file is locked")
+except ValueError as e:
+    print("Cannot parse data. Check file") 
+except Exception as e:
+    print(type(e))
+    print(e)
+finally:
+    file.close()
+    print("Always runs")
+
+
+########## with keyword ##########
+
+#shorthand for opening file and automatically closed outside indent
+with open("input.txt", "r") as file: #Make sure it exists
+    
+    try:
+        int(file.read())
+    except: #example of using thin except here
+        print("parse error...etc...")
+        #do whatever
+
+print(file.closed) #closed
+
+#opening can still throw an exception...Maybe do it like so:
+try:
+    with open("no", "r") as file: #Make sure it exists
+        try:
+            int(file.read())
+        except:
+            print("parse error...etc...")
+            #do whatever
+
+except Exception as e:
+    print(e)

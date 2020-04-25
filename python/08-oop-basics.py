@@ -89,7 +89,7 @@ class Book():
         if self.pages < 100:
             return true
 
-book = Book("Are You My Mother?", 100)
+book = Book("Are You My Mother?", 72)
 book.log() #no need to pass anything to self parameter. 
 
 #A note on __init__
@@ -154,7 +154,7 @@ class Book():
             return true
 
 
-book = Book("Are You My Mother?", 100)
+book = Book("Are You My Mother?", 72)
 book2 = Book("The Digging-est Dog", 72)
 
 Book.favs.append(book)
@@ -201,9 +201,9 @@ class Book():
         return hash(self.title) ^ hash(self.pages) #xor with hash of attributes
         #from Mastering Object-Oriented Python
 
-book = Book("Are You My Mother", 100)
+book = Book("Are You My Mother", 72)
 print(book)
-equal_book = Book("Are You My Mother", 100)
+equal_book = Book("Are You My Mother", 72)
 print("Are they considered equal?", book == equal_book) #yep
 print("Are they the same object?", book is equal_book) #nope
 book2 = Book("The Digging-est Dog", 72)
