@@ -2,7 +2,7 @@
 
 import sqlite3 #included with Python
 
-conn = sqlite3.connect(os.path.realpath(":memory:"))
+conn = sqlite3.connect(":memory:")
 
 #creating this goes off of the cwd.  CD in terminal changes cwd
 #so either cd to correct folder or figure out how to do a more concrete path:
@@ -72,7 +72,24 @@ c.close()
 
 ########## Create an SDK ##########
 
-import booksAPI
-"""
+
+import booksSDK
+from book import Book
+
+book = Book("Are You My Mother?", 1000)
+print("Added book id:", booksAPI.add_book(book))
+print("Get book by title:", booksAPI.get_book_by_title(book.title))
+print("Not a valid book:", booksAPI.get_book_by_title("yeet"))
+
+booksAPI.add_book(Book('The Digging-est Dog', 76))
+print("get books:", booksAPI.get_books())
+
+book = booksAPI.update_book(book, book.title, 76)
+print("Updated book:", book)
+booksAPI.delete_book(book)
+print("After delete:", booksAPI.get_book_by_title("Are You My Mother?"))
+
+print("All books:", booksAPI.get_books())
+
 
 
