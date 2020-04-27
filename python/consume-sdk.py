@@ -27,7 +27,6 @@ while(True):
 ########### CONUMSING SDK ##########
 
 
-
 #This brought up some questions on SDK design
 #Should deleting/updating a book require book object or just title? ID? So many options
 #Not very easy to maintain object as you might easily do with a UI.

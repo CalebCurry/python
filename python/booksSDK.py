@@ -59,4 +59,6 @@ def delete_book(book):
     c = cursor()
     with c.connection:
         c.execute('DELETE FROM books WHERE title=? AND pages=?', (book.title, book.pages))
+    rows = c.rowcount
     c.connection.close()
+    return rows
