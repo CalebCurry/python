@@ -1,0 +1,10 @@
+{% if books %}
+    <ul>
+    {% for book in books %}
+        <li><a href="/reading/{{ book.id }}/">{{ book.title }}</a></li>
+        <li><a href="{% reading:url 'info' book.id %}">{{ book.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No books are available.</p>
+{% endif %}
