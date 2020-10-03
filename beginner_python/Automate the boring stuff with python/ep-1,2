@@ -1,0 +1,79 @@
+Python 3.8.2 (tags/v3.8.2:7b3ab59, Feb 25 2020, 22:45:29) [MSC v.1916 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> print ('hello world')
+hello world
+>>> print('this is the INTERACTIVE SHELL and the new file gives u the FILE EDITOR')
+this is the INTERACTIVE SHELL and the new file gives u the FILE EDITOR
+>>> print ('INTSHELL gives output of the code put line by line and FEDITOR enables u to write the complete code then finally give the out put')
+INTSHELL gives output of the code put line by line and FEDITOR enables u to write the complete code then finally give the out put
+>>> 2+2
+4
+>>> print ('the above is an expression')
+the above is an expression
+>>> 2
+2
+>>> 5-3
+2
+>>> 3*7
+21
+>>> 22/7
+3.142857142857143
+>>> print ('BDMAS rule is applied')
+BDMAS rule is applied
+>>> 8/2
+4.0
+>>> -2.0
+-2.0
+>>> '-2.0 is a floating point val-->floats'
+'-2.0 is a floating point val-->floats'
+>>> alice
+Traceback (most recent call last):
+  File "<pyshell#13>", line 1, in <module>
+    alice
+NameError: name 'alice' is not defined
+>>> 'alice'+'bob'
+'alicebob'
+>>> 'bob'^2
+Traceback (most recent call last):
+  File "<pyshell#15>", line 1, in <module>
+    'bob'^2
+TypeError: unsupported operand type(s) for ^: 'str' and 'int'
+>>> 'bob'*4
+'bobbobbobbob'
+>>> 'hey'+'!'*5
+'hey!!!!!'
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> spam=42
+>>> 'spam egg bacon ham---> famous var names'
+'spam egg bacon ham---> famous var names'
+>>> spam
+42
+>>> spam='ollo'
+>>> spam+'world'
+'olloworld'
+>>> spam+' world'
+'ollo world'
+>>> spam='bye'
+>>> spam
+'bye'
+>>> 
+>>> 
+>>> 
+>>> 
+>>> spam=2+2
+>>> spam
+4
+>>> spam=10
+>>> spam++
+SyntaxError: invalid syntax
+>>> spam+1
+11
+>>> 'spam=10 is a statement amd spam+1 is an expression'
+'spam=10 is a statement amd spam+1 is an expression'
+>>> '2 ep ended'
+'2 ep ended'
+>>> 
