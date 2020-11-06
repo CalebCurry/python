@@ -125,5 +125,5 @@ print(counts)
 
 ########## COUNTING ELEMENTS WITH COUNTER ##########
 
-from colletions import Counter 
+from collections import Counter 
 print(Counter(backpack))
