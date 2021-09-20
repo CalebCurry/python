@@ -3,6 +3,9 @@
 
 #The previous section had this loop. 
 #The only thing we did was print j and a new line.
+
+# nested loop means you can use the loop in side any other loop. means loop in loop for beter understend read this.
+
 for i in range(4):
     for j in range(5):
         print(j, end=" ")
