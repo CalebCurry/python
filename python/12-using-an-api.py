@@ -27,5 +27,5 @@ TkinterImage = ImageTk.PhotoImage(photo)
 myLabel = tkinter.Label(image=TkinterImage)
 myLabel.pack()  # "pack" (add) the label to the window
 
-# we now just add a mainloop() to the window to stop it closing
+# we now just add a mainloop() to open the window
 myWindow.mainloop()
