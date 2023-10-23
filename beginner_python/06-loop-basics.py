@@ -31,9 +31,9 @@ print()
 #You could alternatively use end="\t" or end="" or whatever you want.
 
 #You might be confused why we have to put end and not just:
-print("DOEN'T AFFECT END", " ")
+print("DOESN’T  AFFECT END", " ")
 
-#Because this is interpretted as a second argument to print
+#Because this is interpreted as a second argument to print
 #resulting in a printed " " followed by a newline.
 #We must use end= (This is an example of keyword argument)
 
@@ -48,7 +48,7 @@ for i in range(10):
 print()
 
 #i is known as in iteration variable
-#i will obtain a value each iteration based on the range we select. 
+#i will obtain a value for each iteration based on the range we select. 
 #for range(10), we get 0-9:
 
 for i in range(10):
@@ -104,7 +104,7 @@ print(sum(range(1, 11)))
 numbers = list(range(1, 11))
 print(numbers)
 
-#This is the besr way to easily print a list 
+#This is the best way to easily print a list 
 #as print(range(1,11)) doesn't work as expected
 
 ########## FOR LOOP WITH INDEX ##########
