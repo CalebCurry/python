@@ -5,7 +5,7 @@ languages = ["Python", "C++", "Java"]
 for x in languages:
     print(x)
 
-#The body of this loop (the indented part) will run 4 times
+#The body of this loop (the indented part) will run 3 times
 #Each time is known as an iteration
 #Each iteration, the variable x will contain one element
 #iteration 1 will be the first element
