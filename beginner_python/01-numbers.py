@@ -26,6 +26,9 @@ print(result)
 #You can use round instead. 
 print(round(20/3), 0)
 
+#Round up values to integer
+print(2//4) # Here actual answer 0.5 --> after rounding up answer is 0
+
 print(result / age) #can use variables in place of literals. This will not change variable values
 
 #guess the output:
