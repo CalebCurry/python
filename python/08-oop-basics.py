@@ -179,7 +179,7 @@ class Book():
         self.pages = pages
 
     def is_short(self):
-        return self.pages < 100:
+        return self.pages < 100
 
     #What happens when you pass object to print?
     def __str__(self):
