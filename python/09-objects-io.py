@@ -6,8 +6,7 @@ class Book():
         self.pages = pages
 
     def is_short(self):
-        if self.pages < 100:
-            return true
+        return self.pages < 100
 
     #What happens when you pass object to print?
     def __str__(self):
@@ -15,8 +14,7 @@ class Book():
 
     #What happens when you use ==?
     def __eq__(self, other):
-        if(self.title == other.title and self.pages == other.pages):
-            return True
+        return self.title == other.title and self.pages == other.pages
     
     #It's approriate to give something for __hash__ when you override __eq__
     # #This is the recommended way if mutable (like it is here):
