@@ -188,8 +188,7 @@ class Book():
 
     #What happens when you use ==?
     def __eq__(self, other):
-        if(self.title == other.title and self.pages == other.pages):
-            return True
+        return self.title == other.title and self.pages == other.pages
     
     #It's approriate to give something for __hash__ when you override __eq__
     # #This is the recommended way if mutable (like it is here):
