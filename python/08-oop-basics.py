@@ -87,7 +87,7 @@ class Book():
 
     def is_short(self):
         if self.pages < 100:
-            return true
+            return True
 
 book = Book("Are You My Mother?", 72)
 book.log() #no need to pass anything to self parameter. 
@@ -110,7 +110,7 @@ else:
 
 def book_is_short(book):
     if book.pages < 100:
-        return true
+        return True
 
 if book_is_short(book):
     #do something
@@ -151,7 +151,7 @@ class Book():
 
     def is_short(self):
         if self.pages < 100:
-            return true
+            return True
 
 
 book = Book("Are You My Mother?", 72)
@@ -180,7 +180,7 @@ class Book():
 
     def is_short(self):
         if self.pages < 100:
-            return true
+            return True
 
     #What happens when you pass object to print?
     def __str__(self):
